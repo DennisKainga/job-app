@@ -1,3 +1,4 @@
+{{-- NAVBAR --}}
 <nav id="nav-menu-container">
     <ul class="nav-menu">
         <x-ui.NavItem label="Home" link="{{ route('pages.home') }}" />
