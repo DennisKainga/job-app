@@ -48,9 +48,9 @@
                 <input type="text" class="form-control" id="job-salary" placeholder="Enter the job salary">
             </div>
 
-            <!-- Form Group for Interest -->
+            <!-- Form Group for Category -->
             <div class="mb-3">
-                <label for="interest" class="form-label">Job Interest</label>
+                <label for="interest" class="form-label">Job Category</label>
                 <select class="form-select" id="interest">
                     <option selected disabled>What is your interest?</option>
                     <option value="1">Art</option>
