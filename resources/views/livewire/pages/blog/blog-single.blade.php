@@ -1,25 +1,26 @@
 <div>
-    {{-- Be like water. --}}
-    <!-- start banner Area -->
-    <section class="banner-area relative" id="home">
+
+
+<section class="banner-area relative" id="home">
         <div class="overlay overlay-bg"></div>
         <div class="container">
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="about-content col-lg-12">
                     <h1 class="text-white">
-                        Blog Posts
+                        Blog Single
                     </h1>
                     <p class="text-white link-nav"><a href="index.html">Home </a> <span
                             class="lnr lnr-arrow-right"></span>
-                        <a href="blog-home.html"> Blog Posts</a>
+                        <a href="blog-home.html"> Blog</a>
+                        <span class="lnr lnr-arrow-right"></span>
+                        <a href="blog-home.html"> Blog Single</a>
+
                     </p>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End banner Area -->
-    <!-- Start blog-posts Area -->
-    <section class="blog-posts-area section-gap">
+    </section>  
+<section class="blog-posts-area section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 post-list blog-post-list">
@@ -40,154 +41,41 @@
                             boot camp when you can get the MCSE study materials yourself at
                             a fraction of the camp price. However, who has the willpower to
                             actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
-                        </p>
-                        <div class="bottom-meta">
-                            <div class="user-details row align-items-center">
-                                <div class="comment-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-bubble"></span> 06 Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-behance"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-post">
-                    <img class="img-fluid"src="{{ asset('assets/img/blog/p2.jpg') }}"  alt="" />
-                        <ul class="tags">
-                            <li><a href="#">Art, </a></li>
-                            <li><a href="#">Technology, </a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                        <a href="blog-single.html">
-                            <h1>Cartridge Is Better Than Ever A Discount Toner</h1>
-                        </a>
-                        <p>
+                            willpower to actually sit through a self-imposed MCSE training.</p>
+                            <p>
                             MCSE boot camps have its supporters and its detractors. Some
-                            people do not understand why you should have to spend money on
-                            boot camp when you can get the MCSE study materials yourself at
-                            a fraction of the camp price. However, who has the willpower to
-                            actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
+                             people do not understand why you should have to spend money on 
+                             boot camp when you can get the MCSE study materials yourself at 
+                             a fraction of the camp price. However, who has the willpower to 
+                             actually sit through a self-imposed MCSE training. who has the
+                              willpower to actually sit through a self-imposed MCSE training.
                         </p>
-                        <div class="bottom-meta">
-                            <div class="user-details row align-items-center">
-                                <div class="comment-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-bubble"></span> 06 Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-behance"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="custom-container">
+                            
+                                <p>
+                                “Recently, the US Federal government banned online casinos from operating in America
+                                 by making it illegal to transfer money to them through any US bank or payment system.
+                                  As a result of this law, most of the popular online casino networks such as Party
+                                   Gaming and PlayTech left the United States. Overnight, online casino players 
+                                   found themselves being chased by the Federal government.banking”
+                                </p>
+                              
                         </div>
-                    </div>
-                    <div class="single-post">
-                    <img class="img-fluid"src="{{ asset('assets/img/blog/p3.jpg') }}"  alt="" />
-                        <ul class="tags">
-                            <li><a href="#">Art, </a></li>
-                            <li><a href="#">Technology, </a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                        <a href="blog-single.html">
-                            <h1>Cartridge Is Better Than Ever A Discount Toner</h1>
-                        </a>
                         <p>
-                            MCSE boot camps have its supporters and its detractors. Some
-                            people do not understand why you should have to spend money on
-                            boot camp when you can get the MCSE study materials yourself at
-                            a fraction of the camp price. However, who has the willpower to
-                            actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
+                        MCSE boot camps have its supporters and its detractors. Some 
+                        people do not understand why you should have to spend money 
+                        on boot camp when you can get the MCSE study materials yourself 
+                        at a fraction of the camp price. However, who has the willpower to
+                         actually sit through a self-imposed MCSE training. who has the willpower to
+                          actually sit through a self-imposed MCSE training.
                         </p>
-                        <div class="bottom-meta">
-                            <div class="user-details row align-items-center">
-                                <div class="comment-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-bubble"></span> 06 Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-behance"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-post">
-                    <img class="img-fluid"src="{{ asset('assets/img/blog/p4.jpg') }}"  alt="" />
-                        <ul class="tags">
-                            <li><a href="#">Art, </a></li>
-                            <li><a href="#">Technology, </a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                        <a href="blog-single.html">
-                            <h1>Cartridge Is Better Than Ever A Discount Toner</h1>
-                        </a>
                         <p>
-                            MCSE boot camps have its supporters and its detractors. Some
-                            people do not understand why you should have to spend money on
-                            boot camp when you can get the MCSE study materials yourself at
-                            a fraction of the camp price. However, who has the willpower to
-                            actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
+                        MCSE boot camps have its supporters and its detractors. Some 
+                        people do not understand why you should have to spend money 
+                        on boot camp when you can get the MCSE study materials yourself 
+                        at a fraction of the camp price. However, who has the willpower to
+                         actually sit through a self-imposed MCSE training. who has the willpower to
+                          actually sit through a self-imposed MCSE training.
                         </p>
                         <div class="bottom-meta">
                             <div class="user-details row align-items-center">
@@ -219,16 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 sidebar">
-                    <div class="single-widget search-widget">
-                        <form class="example" action="#" style="margin: auto; max-width: 300px">
-                            <input type="text" placeholder="Search Posts" name="search2" />
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-    
+                    </div> 
                     <div class="single-widget protfolio-widget">
                     <img class="img-fluid"src="{{ asset('assets/img/blog/user2.jpg') }}"  alt="" />
                         <a href="#">
@@ -419,5 +298,4 @@
             </div>
         </div>
     </section>
-    <!-- End blog-posts Area -->
-</div>
+                    

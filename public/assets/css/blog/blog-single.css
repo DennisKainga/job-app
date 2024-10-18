@@ -1,0 +1,10 @@
+.custom-container {
+    background-color: #f0f0f0; /* Light gray background */
+    border-left: 2px solid #79d3f1; /* Light blue vertical line on the left */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.custom-container p {
+    margin-bottom: 15px;
+}
