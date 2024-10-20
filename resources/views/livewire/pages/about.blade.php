@@ -24,8 +24,11 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-8 pb-40 header-text">
-                    <h1>Why Choose Us</h1>
-                    <p>Who are in extremely love with eco friendly system.</p>
+                    <h1>Who are We</h1>
+                    <p>Welcome To Pursuitjob
+At PursuitJob, our story began with a simple yet ambitious vision: to make job opportunities accessible to individuals worldwide, regardless of their nationality. Founded in 2019, our journey has been one of dedication and growth. We recognized the challenges many faces in finding legitimate job listings and navigating the complexities of immigration requirements, especially for non-residents looking for LMIA-approved positions. With our strong commitment and relentless passion, we have transformed into a leading platform that connects employers with job seekers from all corners of the globe, empowering them to chase their dreams without the barriers of extensive costs or complicated paperwork.
+
+</p>
                 </div>
             </div>
             <div class="row">
@@ -92,29 +95,28 @@
     <section class="feature-area">
         <div class="container-fluid">
             <div class="row justify-content-center align-items-center">
-                <div class="col-lg-3 feat-img no-padding">
-                    <img class="img-fluid" src="img/pages/f1.jpg" alt="" />
-                </div>
-                <div class="col-lg-3 no-padding feat-txt">
-                    <h6 class="text-uppercase text-white">Basic & Common Repairs</h6>
-                    <h1>Who we are</h1>
+               
+                <div class="col-lg no-padding feat-txt">
+                    <h6 class="text-uppercase text-white"></h6>
+                    <h1>PURPOSE AND GOALS</h1>
                     <p>
-                        Computer users and programmers have become so accustomed to using
-                        Windows, even for the changing capabilities and the appearances of
-                        the graphical.
+                    Our primary purpose at PursuitJob is to provide a seamless platform where job seekers can find free, authentic job listings that meet the strict LMIA (Labour Market Impact Assessment) criteria. We strive to bridge the gap between talent and opportunity, ensuring that individuals have the resources they need to thrive in their careers. Our goals include expanding our job listings to encompass a diverse range of industries, fostering an inclusive environment for applicants of every background, and continuously innovating our services to support both job seekers and employers in their mutual journey toward success.
                     </p>
                 </div>
-                <div class="col-lg-3 feat-img no-padding">
-                    <img class="img-fluid" src="img/pages/f2.jpg" alt="" />
-                </div>
-                <div class="col-lg-3 no-padding feat-txt">
-                    <h6 class="text-uppercase text-white">Basic & Common Repairs</h6>
-                    <h1>What we do</h1>
+              
+                <div class="col-lg no-padding feat-txt">
+                    <h6 class="text-uppercase text-white"></h6>
+                    <h1>OUR VALUES</h1>
                     <p>
-                        Computer users and programmers have become so accustomed to using
-                        Windows, even for the changing capabilities and the appearances of
-                        the graphical.
+                    We are guided by core values that shape our culture:
                     </p>
+
+                    <ul class="font-weight-bold list-group list-group-numbered">
+<li class="list-group-item">INCLUSIVITY</li>
+<li class="list-group-item">INTEGRITY</li>
+<li class="list-group-item">EMPOWERMENT </li>
+
+</ul>
                 </div>
             </div>
         </div>
