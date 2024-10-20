@@ -50,16 +50,16 @@
 
             <!-- Form Group for Category -->
             <div class="mb-3">
-                <label for="interest" class="form-label">Job Category</label>
-                <select class="form-select" id="interest">
-                    <option selected disabled>What is your interest?</option>
-                    <option value="1">Art</option>
-                    <option value="2">Media</option>
-                    <option value="3">Design</option>
+                <label for="job-category" class="form-label">Job Category</label>
+                <!-- Multiple Select2 Dropdown -->
+                <select class="js-example-basic-multiple w-100 p-3" name="state" multiple="multiple">
+                    <option class="p-2" value="AL">Alabama</option>
+                    <option class="p-2" value="WY">Wyoming</option>
+                    <option class="p-2" value="CA">California</option>
+                    <option class="p-2" value="NY">New York</option>
+                    <option class="p-2" value="TX">Texas</option>
                 </select>
             </div>
-
-
 
             <!-- Submit Button -->
             <button type="submit" class="btn btn-primary">Submit</button>

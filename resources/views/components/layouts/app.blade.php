@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+
+    <!-- Load Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     @livewireStyles
 </head>
 
@@ -58,6 +62,9 @@
     <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
     <script src="{{ asset('assets/js/mail-script.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/form.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     @livewireScripts
 </body>
 
