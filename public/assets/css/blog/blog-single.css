@@ -8,3 +8,9 @@
 .custom-container p {
     margin-bottom: 15px;
 }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
