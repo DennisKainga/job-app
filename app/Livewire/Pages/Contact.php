@@ -3,6 +3,8 @@
 namespace App\Livewire\Pages;
 
 use Livewire\Component;
+use App\Mail\ContactUsMail;
+use Illuminate\Support\Facades\Mail;
 
 class Contact extends Component
 {
@@ -18,14 +20,11 @@ class Contact extends Component
         'message' => 'required'
     ];
 
-    public function Updated($propertyName){
-        $this->validateOnly($propertyName);
+    public function send(){
+        $toEmail = 'harrisonmuraya8@gmail.com';
+        Mail::to($toEmail)->send(new ContactUsMail($this->name, $this->email, $this->subject, $this->message));
     }
 
-    public function send(){
-        Session()->flash('success','Message sent');
-        $this->reset();
-    }
 
     public function render()
     {
