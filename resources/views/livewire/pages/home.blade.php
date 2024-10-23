@@ -149,7 +149,7 @@
                 <div class="menu-content pb-60 col-lg-10">
                     <div class="title text-center">
                         <h1 class="mb-10">Featured Job Categories</h1>
-                        <p>Who are in extremely love with eco friendly system.</p>
+                        <p>Here are examples of the jobs you’ll never miss on our site.</p>
                     </div>
                 </div>
             </div>
@@ -159,7 +159,7 @@
                         <a href="category.html">
                             <img src="{{ asset('assets/img/o1.png') }}" alt="">
                         </a>
-                        <p>Accounting</p>
+                        <p>Agriculture</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -167,7 +167,7 @@
                         <a href="category.html">
                             <img src="{{ asset('assets/img/o2.png') }}" alt="">
                         </a>
-                        <p>Development</p>
+                        <p>Construction</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -175,7 +175,7 @@
                         <a href="category.html">
                             <img src="{{ asset('assets/img/o3.png') }}" alt="">
                         </a>
-                        <p>Technology</p>
+                        <p>Service Industry</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -183,7 +183,7 @@
                         <a href="category.html">
                             <img src="{{ asset('assets/img/o4.png') }}" alt="">
                         </a>
-                        <p>Media & News</p>
+                        <p>Healthcare</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -191,7 +191,7 @@
                         <a href="category.html">
                             <img src="{{ asset('assets/img/o5.png') }}" alt="">
                         </a>
-                        <p>Medical</p>
+                        <p>Transportation</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -199,7 +199,7 @@
                         <a href="category.html">
                             <img src="{{ asset('assets/img/o6.png') }}" alt="">
                         </a>
-                        <p>Goverment</p>
+                        <p>Manufacturing</p>
                     </div>
                 </div>
             </div>
