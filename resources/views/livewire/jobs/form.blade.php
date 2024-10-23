@@ -27,8 +27,9 @@
             <!-- Form Group for Job Description -->
             <div class="mb-3">
                 <label for="job-description" class="form-label">Job Description</label>
-                <textarea class="form-control" id="job-description" rows="3"></textarea>
+                <textarea class="form-control" id="job-description" rows="10"></textarea>
             </div>
+
 
             <!-- Form Group for Job Nature -->
             <div class="mb-3">
@@ -52,7 +53,7 @@
             <div class="mb-3">
                 <label for="job-category" class="form-label">Job Category</label>
                 <!-- Multiple Select2 Dropdown -->
-                <select class="js-example-basic-multiple w-100 p-3" name="state" multiple="multiple">
+                <select class="js-example-basic-multiple w-100" multiple="multiple">
                     <option class="p-2" value="AL">Alabama</option>
                     <option class="p-2" value="WY">Wyoming</option>
                     <option class="p-2" value="CA">California</option>
@@ -65,7 +66,6 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
 </div>
 
 
