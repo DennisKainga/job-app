@@ -3,38 +3,31 @@
     <section class="features-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="single-feature">
-                        <h4>Searching</h4>
+                        <h4>Search a job </h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            Search for your desired jobs.
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="single-feature">
-                        <h4>Applying</h4>
+                        <h4>Apply for job</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            Make your application direct to the employer.
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="single-feature">
-                        <h4>Security</h4>
+                        <h4>Get your job</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            Wait for response from the employer .
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-feature">
-                        <h4>Notifications</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing.
-                        </p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section><!-- Start popular-post Area -->
@@ -671,11 +664,10 @@
             <div class="row d-flex justify-content-center">
                 <div class="menu-content col-lg-9">
                     <div class="title text-center">
-                        <h1 class="mb-10 text-white">Join us today without any hesitation</h1>
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation.</p>
-                        <a class="primary-btn" href="#">I am a Candidate</a>
+                        <h1 class="mb-10 text-white">MAKE A DIFFERENCE WITH YOUR RESUME</h1>
+                        <p class="text-white">With many new jobs listed almost everyday and thousands of employers always searching for the
+                            right candidate just like you. Make it easy for employers to find you with your updated resume.</p>
+                        <a class="primary-btn" href="#">CLICK HERE TO APPLY</a>
                         {{-- <a class="primary-btn" href="#">Request Free Demo</a> --}}
                     </div>
                 </div>
