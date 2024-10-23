@@ -4,6 +4,7 @@ namespace App\Livewire\Pages;
 
 use Livewire\Component;
 use App\Mail\ContactUsMail;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Mail;
 
 class Contact extends Component
@@ -23,6 +24,10 @@ class Contact extends Component
     public function send(){
         $toEmail = 'harrisonmuraya8@gmail.com';
         Mail::to($toEmail)->send(new ContactUsMail($this->name, $this->email, $this->subject, $this->message));
+
+
+        Session()->flash('success','Message sent Successfully');
+        $this->reset();
     }
 
 

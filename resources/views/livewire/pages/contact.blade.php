@@ -30,6 +30,14 @@
                     <a class="contact-btns" href="#">Create New Account</a>
                 </div>
                 <div class="col-lg-8">
+
+                    @if (session()-> has('success'))
+                    <div class="bg-green-200 text-green-800 px-4 py-2 rounded-lg">
+                        {{session('success')}}
+                    </div>
+                        
+                    @endif
+
                     <form class="form-area " id="myForm" action="mail.php" wire:submit=send method="post"
                         class="contact-form text-right">
                         <div class="row">
