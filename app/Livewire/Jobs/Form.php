@@ -28,6 +28,8 @@ class Form extends Component
     {
         $this->validate();
 
+        dd($this->all());
+
         job_form::create([
             'job_title' => $this->job_title,
             'job_description' => $this->job_description,
