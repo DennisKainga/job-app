@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href= "{{ asset('assets/css/blog/blog-single.css') }}" >
+    <link rel="stylesheet" href= "{{ asset('assets/css/blog/upload.css') }}" >
     
     @livewireStyles
 </head>
@@ -60,6 +61,9 @@
     <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
     <script src="{{ asset('assets/js/mail-script.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script src="{{ asset('assets/js/blogs/blogs.js') }}"></script>
+
     @livewireScripts
 </body>
 
