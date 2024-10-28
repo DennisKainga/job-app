@@ -3,6 +3,7 @@
 namespace App\Livewire\Jobs;
 
 use App\Models\job_form;
+use App\Models\jobform;
 use Livewire\Component;
 
 class Form extends Component
@@ -15,22 +16,29 @@ class Form extends Component
     public $job_salary;
     public $job_category = [];
 
-    protected $rules = [
-        'job_title' => 'required|string|max:255',
-        'job_description' => 'required|string',
-        'job_nature' => 'required|string|max:255',
-        'company_name' => 'required|string|max:255',
-        'job_salary' => 'required|numeric',
-        'job_category' => 'required|array',
-    ];
+    // protected $rules = [
+    //     'job_title' => 'required|string|max:255',
+    //     'job_description' => 'required|string',
+    //     'job_nature' => 'required|string|max:255',
+    //     'company_name' => 'required|string|max:255',
+    //     'job_salary' => 'required|numeric',
+    //     'job_category' => 'required|array',
+    // ];
 
     public function submit()
     {
-        $this->validate();
+        $this->validate([
+            'job_title' => 'required|string|max:255',
+            'job_description' => '',
+            'job_nature' => 'required|string|max:255',
+            'company_name' => 'required|string|max:255',
+            'job_salary' => 'required|numeric',
+            'job_category' => 'array',
+        ]);
 
-        dd($this->all());
+        // dd($this->all());
 
-        job_form::create([
+        jobform::create([
             'job_title' => $this->job_title,
             'job_description' => $this->job_description,
             'job_nature' => $this->job_nature,
