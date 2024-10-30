@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
 
     ClassicEditor
-    .create(document.querySelector('#description'))
+    .create(document.querySelector('#content'))
     .catch(error =>{
         console.error(error);
     });

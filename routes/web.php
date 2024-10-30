@@ -18,3 +18,4 @@ Route::get('blogs', BlogIndex::class)->name('pages.blog.index');
 Route::get('contact-us', Contact::class)->name('pages.contact');
 Route::get('blog-single',BlogSingle::class)->name('pages.blog.blog-single');
 Route ::get('blog-upload',BlogUpload::class)->name('pages.blog.blog-upload');
+Route::get('/blogs/{id}', BlogSingle::class)->name('blogs.show');

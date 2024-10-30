@@ -6,45 +6,48 @@ namespace App\Livewire\Pages\Blog;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\blog;
+use Carbon\Carbon;
 
 class BlogUpload extends Component
 {
     use WithFileUploads;
 
     public $title;
-    public $description;
     public $content;
+    public $image;
 
-    // Validation rules
     protected $rules = [
-        'title' => 'required|max:255',
-        'description' => 'required',
-        'content' => 'required|file|mimes:doc,pdf,txt|max:2048',
+        'title' => 'required|string|max:255',
+        'content' => 'required|string',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // 2MB max for image file
     ];
 
-    // Method to save blog
-    public function submit()
+    public function saveBlog()
     {
-        // Validate input
         $this->validate();
 
-        dd($this->all());
-        // Handle the file upload
-        $filePath = $this->content->store('uploads', 'public');
+        // Handle the image upload if it exists
+        $imagePath = $this->image->store('blog_images', 'public');
+       
 
         // Save the blog post
-        blog::create([
+        Blog::create([
             'title' => $this->title,
-            'description' => $this->description,
-            'content_path' => $filePath,
+            'content' => $this->content,
+            'image_path' => $imagePath,
+            'created_at' => Carbon::now(),
+
         ]);
+        
+        // Emit event if necessary and reset fields
+        
+        $this->reset(['title', 'content', 'image']);
 
-        // Reset the form
-        $this->reset(['title', 'description', 'content']);
-
-        // Send a success message
-        session()->flash('success', 'Blog uploaded successfully!');
+        session()->flash('message', 'Blog uploaded successfully!');
     }
+
+   
+
     public function render()
     {
         return view('livewire.pages.blog.blog-upload');
