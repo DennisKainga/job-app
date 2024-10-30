@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Counter;
+use App\Http\Controllers\JobController;
 use App\Livewire\Jobs\Form;
 use App\Livewire\Pages\About;
 use App\Livewire\Pages\Blog\BlogIndex;
@@ -18,4 +19,5 @@ Route::get('contact-us', Contact::class)->name('pages.contact');
 
 Route::group(['prefix' => 'jobs'], function () {
     Route::get('form', Form::class)->name('jobs.form');
+    Route::post('form', [JobController::class, 'store'])->name('job.store');
 });

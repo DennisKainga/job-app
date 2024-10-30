@@ -16,6 +16,7 @@
         </div>
     </section>
 
+
     <div class="container mt-50 mb-50">
         @if (session()->has('message'))
             <div class="alert alert-success">
@@ -23,21 +24,23 @@
             </div>
         @endif
 
-        <form wire:submit.prevent="submit">
+        <form action="{{ route('job.store') }}" method="POST">
+            @csrf
+
             <!-- Job Title -->
             <div class="mb-3">
                 <label for="job-title" class="form-label fw-bold fs-4">Job Title</label>
-                <input type="text" class="form-control" id="job-title" placeholder="Enter the job title"
-                    wire:model="job_title">
+                <input type="text" class="form-control" id="job-title" name="job_title"
+                    placeholder="Enter the job title">
                 @error('job_title')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
-            <!-- Job Description (CKEditor) -->
+            <!-- Job Description -->
             <div class="mb-3">
                 <label for="job-description" class="form-label">Job Description</label>
-                <textarea class="form-control" id="job-description" rows="10" wire:model="job_description"></textarea>
+                <textarea class="form-control" id="job-description" name="job_description" rows="10"></textarea>
                 @error('job_description')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -46,8 +49,8 @@
             <!-- Job Nature -->
             <div class="mb-3">
                 <label for="job-nature" class="form-label">Job Nature</label>
-                <input type="text" class="form-control" id="job-nature" placeholder="Enter the job nature"
-                    wire:model="job_nature">
+                <input type="text" class="form-control" id="job-nature" name="job_nature"
+                    placeholder="Enter the job nature">
                 @error('job_nature')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -56,8 +59,8 @@
             <!-- Company Name -->
             <div class="mb-3">
                 <label for="company-name" class="form-label">Company Name</label>
-                <input type="text" class="form-control" id="company-name" placeholder="Enter the company name"
-                    wire:model="company_name">
+                <input type="text" class="form-control" id="company-name" name="company_name"
+                    placeholder="Enter the company name">
                 @error('company_name')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -66,17 +69,17 @@
             <!-- Job Salary -->
             <div class="mb-3">
                 <label for="job-salary" class="form-label">Job Salary</label>
-                <input type="text" class="form-control" id="job-salary" placeholder="Enter the job salary"
-                    wire:model="job_salary">
+                <input type="text" class="form-control" id="job-salary" name="job_salary"
+                    placeholder="Enter the job salary">
                 @error('job_salary')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
-            <!-- Job Category (Select2) -->
+            <!-- Job Category -->
             <div class="mb-3">
                 <label for="job-category" class="form-label">Job Category</label>
-                <select class="js-example-basic-multiple w-100" multiple="multiple" wire:model="job_category">
+                <select class="js-example-basic-multiple w-100" name="job_category[]" multiple="multiple">
                     <option class="p-2" value="AL">Alabama</option>
                     <option class="p-2" value="WY">Wyoming</option>
                     <option class="p-2" value="CA">California</option>
@@ -92,4 +95,5 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
 </div>
