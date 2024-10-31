@@ -1,0 +1,28 @@
+.blog-large-preview {
+    display: flex;
+    align-items: flex-start;
+}
+
+.blog-large-thumbnail {
+    width: 200px; /* Set desired width for larger image */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 15px;
+}
+
+
+
+.blog-title {
+    font-size: 1.2em; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.blog-timestamp {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.blog-content-preview {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}

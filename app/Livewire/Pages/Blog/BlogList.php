@@ -30,8 +30,10 @@ class BlogList extends Component
         // Redirect to the blog-index page with the blog's ID
         return redirect()->route('blogs.show', ['id' => $id]);
     }
-        public function render()
+    public function render()
     {
-        return view('livewire.pages.blog.blog-list');
+        $blogs = Blog::latest()->get(); // Fetches all blogs, ordered by latest
+        return view('livewire.pages.blog.blog-list', ['blogs' => $blogs]);
     }
+       
 }

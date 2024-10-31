@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href= "{{ asset('assets/css/blog/blog-single.css') }}" >
     <link rel="stylesheet" href= "{{ asset('assets/css/blog/upload.css') }}" >
+    <link rel="stylesheet" href= "{{ asset('assets/css/blog/blog-list.css') }}" >
     
     @livewireStyles
 </head>

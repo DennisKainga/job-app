@@ -306,56 +306,15 @@
                     <div class="single-widget recent-posts-widget">
                         <h4 class="title">Recent Posts</h4>
                         <div class="blog-list">
-                            <div class="single-recent-post d-flex flex-row">
-                                <div class="recent-thumb">
-                                    <img class="img-fluid" src="{{ asset('assets/img/blog/r1.jpg') }}" alt="" />
-                                </div>
-                                <div class="recent-details">
-                                    <a href="blog-single.html">
-                                        <h4>Home Audio Recording For Everyone</h4>
-                                    </a>
-                                    <p>02 hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-recent-post d-flex flex-row">
-                                <div class="recent-thumb">
-                                    <img class="img-fluid" src="{{ asset('assets/img/blog/r2.jpg') }}" alt="" />
-                                </div>
-                                <div class="recent-details">
-                                    <a href="blog-single.html">
-                                        <h4>Home Audio Recording For Everyone</h4>
-                                    </a>
-                                    <p>02 hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-recent-post d-flex flex-row">
-                                <div class="recent-thumb">
-                                    <img class="img-fluid" src="{{ asset('assets/img/blog/r3.jpg') }}" alt="" />
-                                </div>
-                                <div class="recent-details">
-                                    <a href="blog-single.html">
-                                        <h4>Home Audio Recording For Everyone</h4>
-                                    </a>
-                                    <p>02 hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-recent-post d-flex flex-row">
-                                <div class="recent-thumb">
-                                    <img class="img-fluid" src="{{ asset('assets/img/blog/r4.jpg') }}" alt="" />
-                                </div>
-                                <div class="recent-details">
-                                    <a href="blog-single.html">
-                                        <h4>Home Audio Recording For Everyone</h4>
-                                    </a>
-                                    <p>02 hours ago</p>
-                                </div>
-                            </div>
-                        </div>
+                            
                         <div>
                             
-                            <h1>All Blogs</h1>
                             @livewire('pages.blog.blog-list')
                         </div>
+                            
+                            
+                        </div>
+                       
                         
                     </div>
 

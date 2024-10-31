@@ -1,0 +1,27 @@
+.blog-thumbnail {
+    width: 80px; /* Adjust the width as needed */
+    height: 80px; /* Keeps the aspect ratio */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    object-fit: cover; /* Ensures the image fills the given size without distortion */
+}
+.blog-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between image and text */
+    margin-bottom: 15px; /* Adds spacing between blog entries */
+}
+.blog-info {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.blog-timestamp {
+    font-size: 0.9em;
+    color: #666;
+}
