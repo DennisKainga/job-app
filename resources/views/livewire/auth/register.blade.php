@@ -1,123 +1,75 @@
 <div>
-    <form method="POST" action="">
-        {% csrf_token %}
-    
-        <!-- First Name -->
-        <div class="relative mb-6">
-          <input
-            type="text"
-            id="firstname"
-            name="firstname"
-            class="peer bg-transparent h-12 w-full rounded-lg text-green-700 placeholder-transparent ring-2 px-2 pt-4 ring-green-500 focus:ring-green-800 focus:outline-none"
-            placeholder="First Name"
-          />
-          <label
-            for="firstname"
-            class="absolute left-2 -top-2.5 text-sm text-green-600 bg-teal-100 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-green-700 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-green-800 peer-focus:text-sm transition-all"
-            >First Name</label
-          >
+  {{-- Do your work, then step back. --}}
+      <!-- start banner Area -->
+      <section class="banner-area relative" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                   Register
+                </h1>
+              </div>
+          </div>
+            
         </div>
+    </section>
   
-        <!-- Last Name -->
-        <div class="relative mb-6">
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            class="peer bg-transparent h-12 w-full rounded-lg text-green-700 placeholder-transparent ring-2 px-2 pt-4 ring-green-500 focus:ring-green-800 focus:outline-none"
-            placeholder="Last Name"
-          />
-          <label
-            for="lastname"
-            class="absolute left-2 -top-2.5 text-sm text-green-600 bg-teal-100 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-green-700 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-green-800 peer-focus:text-sm transition-all"
-            >Last Name</label
-          >
-        </div>
+    <div class="container d-flex justify-content-center my-4 align-items-center" style="min-height: 50vh;">
+      <div class="p-4 rounded border" style="width: 100%; max-width: 400px;">
+              <form wire:submit.prevent="storeUser" >
+                  
+                  <!-- First Name -->
+                  <div class="mb-3">
+                      <label for="firstname" class="form-label text-success">First Name</label>
+                      <input type="text" id="firstname" wire:model="firstname" class="form-control" placeholder="First Name"/>
+                      @error('firstname') <span class="text-danger">{{ $message }}</span> @enderror
+                  </div>
   
-        <!-- Email -->
-        <div class="relative mb-6">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="peer bg-transparent h-12 w-full rounded-lg text-green-700 placeholder-transparent ring-2 px-2 pt-4 ring-green-500 focus:ring-green-800 focus:outline-none"
-            placeholder="Email"
-          />
-          <label
-            for="email"
-            class="absolute left-2 -top-2.5 text-sm text-green-600 bg-teal-100 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-green-700 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-green-800 peer-focus:text-sm transition-all"
-            >Email</label
-          >
-        </div>
+                  <!-- Last Name -->
+                  <div class="mb-3">
+                      <label for="lastname" class="form-label text-success">Last Name</label>
+                      <input type="text" id="lastname" wire:model="lastname" class="form-control" placeholder="Last Name"/>
+                      @error('lastname') <span class="text-danger">{{ $message }}</span> @enderror
+                  </div>
   
-        <!-- Password -->
-        <div class="relative mb-6">
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="peer bg-transparent h-12 w-full rounded-lg text-green-700 placeholder-transparent ring-2 px-2 pt-4 ring-green-500 focus:ring-green-800 focus:outline-none"
-            placeholder="Password"
-          />
-          <label
-            for="password"
-            class="absolute left-2 -top-2.5 text-sm text-green-600 bg-teal-100 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-green-700 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-green-800 peer-focus:text-sm transition-all"
-            >Password</label
-          >
-        </div>
+                  <!-- Email -->
+                  <div class="mb-3">
+                      <label for="email" class="form-label text-success">Email</label>
+                      <input type="email" id="email" wire:model="email" class="form-control" placeholder="Email"/>
+                      @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                  </div>
   
-        <!-- Confirm Password -->
-        <div class="relative mb-6">
-          <input
-            type="password"
-            id="confirm_password"
-            name="confirm_password"
-            class="peer bg-transparent h-12 w-full rounded-lg text-green-700 placeholder-transparent ring-2 px-2 pt-4 ring-green-500 focus:ring-green-800 focus:outline-none"
-            placeholder="Confirm Password"
-          />
-          <label
-            for="confirm_password"
-            class="absolute left-2 -top-2.5 text-sm text-green-600 bg-teal-100 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-green-700 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-green-800 peer-focus:text-sm transition-all"
-            >Confirm Password</label
-          >
-        </div>
+                  <!-- Password -->
+                  <div class="mb-3">
+                      <label for="password" class="form-label text-success">Password</label>
+                      <input type="password" id="password" wire:model="password" class="form-control" placeholder="Password"/>
+                      @error('password') <span class="text-danger">{{ $message }}</span> @enderror
+                  </div>
   
-        <!-- Remember Me for 30 Days -->
-        <div class="flex items-center mb-6">
-          <input
-            type="checkbox"
-            id="remember_me"
-            name="remember_me"
-            class="mr-2"
-          />
-          <label for="remember_me" class="text-green-700"
-            >Remember me for 30 days</label
-          >
-        </div>
+                  <!-- Confirm Password -->
+                  <div class="mb-3">
+                      <label for="confirm_password" class="form-label text-success">Confirm Password</label>
+                      <input type="password" id="confirm_password" wire:model="password_confirmation" class="form-control" placeholder="Confirm Password"/>
+                      @error('password_confirmation') <span class="text-danger">{{ $message }}</span> @enderror
+                  </div>
   
-        <!-- Submit Button -->
-        <div class="flex justify-center">
-          <button
-            type="submit"
-            class="w-full h-12 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all"
-          >
-            Register
-          </button>
-        </div>
+                  <!-- Remember Me -->
+                  <div class="form-check mb-3">
+                      <input type="checkbox" id="remember_me" class="form-check-input">
+                      <label for="remember_me" class="form-check-label">Remember me for 30 days</label>
+                  </div>
   
-        <!-- Login & Cancel Links -->
-        <div class="flex justify-between mt-4">
-          <a href="{% url 'loginPage' %}" class="text-green-600 hover:underline"
-            >Already have an account? Log in</a
-          >
-          <a href="#" class="text-red-600 hover:underline">Cancel</a>
-        </div>
+                  <!-- Submit Button -->
+                  <button type="submit" class="btn btn-success w-100">Register</button>
   
-        <!-- OR Divider -->
-        <div class="flex items-center my-4">
-          <hr class="w-full border-gray-300" />
-          <span class="mx-4 text-gray-500">OR</span>
-          <hr class="w-full border-gray-300" />
-        </div>
-      </form>
-</div>
+                  <!-- Links -->
+                  <div class="d-flex justify-content-between mt-3">
+                      <a href="{{route('login')}}" class="text-success">Already have an account? Log in</a>
+                      <a href="{{route('pages.contact')}}" class="text-danger">Cancel</a>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+  

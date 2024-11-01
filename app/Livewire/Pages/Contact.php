@@ -4,8 +4,9 @@ namespace App\Livewire\Pages;
 
 use Livewire\Component;
 use App\Mail\ContactUsMail;
-use Illuminate\Contracts\Session\Session;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Contracts\Session\Session;
 
 class Contact extends Component
 {
@@ -21,6 +22,16 @@ class Contact extends Component
         'message' => 'required'
     ];
 
+    public function mount()
+    {
+        // Check if the user is authenticated and prefill the fields
+        if (Auth::check()) {
+            $user = Auth::user();
+            $this->name = $user->firstname . ' ' . $user->lastname; // Combine first and last name
+            $this->email = $user->email;
+        }
+    }
+
     public function send(){
         $toEmail = 'harrisonmuraya8@gmail.com';
         Mail::to($toEmail)->send(new ContactUsMail($this->name, $this->email, $this->subject, $this->message));
@@ -30,6 +41,10 @@ class Contact extends Component
         $this->reset();
     }
 
+    public function redirectToLogin()
+    {
+        return redirect()->route('login');
+    }
 
     public function render()
     {
