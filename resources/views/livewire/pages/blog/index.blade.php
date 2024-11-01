@@ -23,203 +23,57 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 post-list blog-post-list">
-                    <div class="single-post">
-                        <img class="img-fluid" src="{{ asset('assets/img/blog/p1.jpg') }}" alt="" />
-                        <ul class="tags">
-                            <li><a href="#">Art, </a></li>
-                            <li><a href="#">Technology, </a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
+                    <div class="blog-large-section">
+                    @foreach ($blogs as $blog)
+                            <div class="single-post ">
+                                <img src="{{ asset('storage/' . $blog->image_path) }}" alt="{{ $blog->title }}"
+                                    class="img-fluid w-100" style="height:500px;">
+                                <ul class="tags">
+                                    <li><a href="#">Art, </a></li>
+                                    <li><a href="#">Technology, </a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                </ul>
 
-                        <a href="blog-single.html">
-                            <h1>Cartridge Is Better Than Ever A Discount Toner</h1>
-                        </a>
-                        <p>
-                            MCSE boot camps have its supporters and its detractors. Some
-                            people do not understand why you should have to spend money on
-                            boot camp when you can get the MCSE study materials yourself at
-                            a fraction of the camp price. However, who has the willpower to
-                            actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
-                        </p>
-                        <div class="bottom-meta">
-                            <div class="user-details row align-items-center">
-                                <div class="comment-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-bubble"></span> 06 Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-behance"></i></a>
-                                        </li>
-                                    </ul>
+                                <h2>{{ $blog->title }}</h2>
+                                <p>{{ $blog->created_at->format('M d, Y') }}</p>
+                                <p>{{ Str::limit($blog->content, 1000) }}</p>
+                                <!-- Optional preview of the blog content -->
+
+                                <div class="bottom-meta">
+                                    <div class="user-details row align-items-center">
+                                        <div class="comment-wrap col-lg-6">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><span class="lnr lnr-bubble"></span> 06
+                                                        Comments</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="social-wrap col-lg-6">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="single-post">
-                        <img class="img-fluid" src="{{ asset('assets/img/blog/p2.jpg') }}" alt="" />
-                        <ul class="tags">
-                            <li><a href="#">Art, </a></li>
-                            <li><a href="#">Technology, </a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                        <a href="blog-single.html">
-                            <h1>Cartridge Is Better Than Ever A Discount Toner</h1>
-                        </a>
-                        <p>
-                            MCSE boot camps have its supporters and its detractors. Some
-                            people do not understand why you should have to spend money on
-                            boot camp when you can get the MCSE study materials yourself at
-                            a fraction of the camp price. However, who has the willpower to
-                            actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
-                        </p>
-                        <div class="bottom-meta">
-                            <div class="user-details row align-items-center">
-                                <div class="comment-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-bubble"></span> 06 Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-behance"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-post">
-                        <img class="img-fluid" src="{{ asset('assets/img/blog/p3.jpg') }}" alt="" />
-                        <ul class="tags">
-                            <li><a href="#">Art, </a></li>
-                            <li><a href="#">Technology, </a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                        <a href="blog-single.html">
-                            <h1>Cartridge Is Better Than Ever A Discount Toner</h1>
-                        </a>
-                        <p>
-                            MCSE boot camps have its supporters and its detractors. Some
-                            people do not understand why you should have to spend money on
-                            boot camp when you can get the MCSE study materials yourself at
-                            a fraction of the camp price. However, who has the willpower to
-                            actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
-                        </p>
-                        <div class="bottom-meta">
-                            <div class="user-details row align-items-center">
-                                <div class="comment-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-bubble"></span> 06 Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-behance"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-post">
-                        <img class="img-fluid" src="{{ asset('assets/img/blog/p4.jpg') }}" alt="" />
-                        <ul class="tags">
-                            <li><a href="#">Art, </a></li>
-                            <li><a href="#">Technology, </a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                        <a href="blog-single.html">
-                            <h1>Cartridge Is Better Than Ever A Discount Toner</h1>
-                        </a>
-                        <p>
-                            MCSE boot camps have its supporters and its detractors. Some
-                            people do not understand why you should have to spend money on
-                            boot camp when you can get the MCSE study materials yourself at
-                            a fraction of the camp price. However, who has the willpower to
-                            actually sit through a self-imposed MCSE training. who has the
-                            willpower to actually sit through a self-imposed MCSE training.
-                        </p>
-                        <div class="bottom-meta">
-                            <div class="user-details row align-items-center">
-                                <div class="comment-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-heart"></span> 4 likes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="lnr lnr-bubble"></span> 06 Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="social-wrap col-lg-6">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-behance"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach
+</div>
+                   
                 </div>
                 <div class="col-lg-4 sidebar">
                     <div class="single-widget search-widget">

@@ -5,7 +5,7 @@
 
 .blog-large-thumbnail {
     width: 200px; /* Set desired width for larger image */
-    height: auto; /* Maintains aspect ratio */
+    height: 200px; /* Maintains aspect ratio */
     margin-right: 15px;
 }
 

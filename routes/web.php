@@ -9,6 +9,7 @@ use App\Livewire\Pages\Jobs\JobIndex;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Pages\Blog\BlogSingle;
 use App\Livewire\Pages\Blog\BlogUpload;
+use App\Http\Controllers\BlogController;
 
 
 Route::get('/', Home::class)->name('pages.home');
@@ -19,3 +20,4 @@ Route::get('contact-us', Contact::class)->name('pages.contact');
 Route::get('blog-single',BlogSingle::class)->name('pages.blog.blog-single');
 Route ::get('blog-upload',BlogUpload::class)->name('pages.blog.blog-upload');
 Route::get('/blogs/{id}', BlogSingle::class)->name('blogs.show');
+Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
