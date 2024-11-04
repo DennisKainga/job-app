@@ -33,7 +33,8 @@
     <div class="row">
         <div class="col-lg-8  col-md-8 col-sm-12 post-list blog-post-list">
             <div class="single-post">
-                <img class="img-fluid" src="{{ asset('assets/img/blog/p1.jpg') }}" alt="" />
+            <img src="{{ asset('storage/' . $blog->image_path) }}" alt="{{ $blog->title }}"
+            class="img-fluid  mt-60 w-100" style="height:500px;" >
                 <ul class="tags">
                     <li><a href="#">Art, </a></li>
                     <li><a href="#">Technology, </a></li>
@@ -257,7 +258,7 @@
 
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-12 sidebar">
+        <div class="col-lg-4 col-md-4 col-sm-12 sidebar mt-60">
             <div class="single-widget search-widget">
                 <form class="example" action="#" style="margin: auto; max-width: 300px">
                     <input type="text" placeholder="Search Posts" name="search2" />

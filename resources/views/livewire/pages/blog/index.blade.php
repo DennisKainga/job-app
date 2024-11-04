@@ -25,9 +25,9 @@
                 <div class="col-lg-8 post-list blog-post-list">
                     <div class="blog-large-section">
                     @foreach ($blogs as $blog)
-                            <div class="single-post ">
-                                <img src="{{ asset('storage/' . $blog->image_path) }}" alt="{{ $blog->title }}"
-                                    class="img-fluid w-100" style="height:500px;">
+                            <div class="single-post" wire:click="viewBlog({{ $blog->id }})">
+                                <img src="{{ asset('storage/' . $blog->image_path) }}" alt="{{ $blog->title }}" 
+                                    class= "img-fluid w-100 " style="height:500px;">
                                 <ul class="tags">
                                     <li><a href="#">Art, </a></li>
                                     <li><a href="#">Technology, </a></li>
@@ -36,7 +36,7 @@
 
                                 <h2>{{ $blog->title }}</h2>
                                 <p>{{ $blog->created_at->format('M d, Y') }}</p>
-                                <p>{{ Str::limit($blog->content, 1000) }}</p>
+                                <p>{!! Str::limit($blog->content, 1000) !!}</p>
                                 <!-- Optional preview of the blog content -->
 
                                 <div class="bottom-meta">

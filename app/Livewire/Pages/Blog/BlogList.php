@@ -32,7 +32,7 @@ class BlogList extends Component
     }
     public function render()
     {
-        $blogs = Blog::latest()->get(); // Fetches all blogs, ordered by latest
+        $blogs = Blog::latest()->take(3)->get(); // Fetches 3 blogs, ordered by latest
         return view('livewire.pages.blog.blog-list', ['blogs' => $blogs]);
     }
        
