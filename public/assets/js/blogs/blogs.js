@@ -6,4 +6,7 @@ document.addEventListener('DOMContentLoaded',function(){
         console.error(error);
     });
     });
+    $(document).ready(function() {
+        $('#category').select2();
+    });
 

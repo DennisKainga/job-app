@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\blog;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
     public function store(Request $request)
     {
         // Validate the form data
-        $request->validate([
+        $validated = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required',
             'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048', // 2MB max size
+            'category' => 'required|string|in:Technology,Lifestyle,Fashion,Art,Food,Architecture,Adventure',
         ]);
 
         // Store the uploaded image if available
@@ -27,9 +29,22 @@ class BlogController extends Controller
             'title' => $request->input('title'),
             'content' => $request->input('content'),
             'image_path' => $imagePath,
+            'category' => $validated['category'],  // Store the category
         ]);
 
+        
         // Redirect with success message
         return redirect()->back()->with('message', 'Blog uploaded successfully!');
     }
+    public function index()
+{
+    // Get the count of blogs per category
+    $categoryCounts = Blog::select('category', DB::raw('count(*) as count'))
+                          ->groupBy('category')
+                          ->get();
+    
+    // Pass the counts to the view
+    return view('livewire.pages.blog.index', compact('categoryCounts'));
 }
+}
+

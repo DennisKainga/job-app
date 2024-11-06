@@ -293,52 +293,18 @@
             </div>
 
             <div class="single-widget category-widget">
-                <h4 class="title">Post Categories</h4>
-                <ul>
-                    <li>
-                        <a href="#" class="justify-content-between align-items-center d-flex">
-                            <h6>Techlology</h6>
-                            <span>37</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="justify-content-between align-items-center d-flex">
-                            <h6>Lifestyle</h6>
-                            <span>24</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="justify-content-between align-items-center d-flex">
-                            <h6>Fashion</h6>
-                            <span>59</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="justify-content-between align-items-center d-flex">
-                            <h6>Art</h6>
-                            <span>29</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="justify-content-between align-items-center d-flex">
-                            <h6>Food</h6>
-                            <span>15</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="justify-content-between align-items-center d-flex">
-                            <h6>Architecture</h6>
-                            <span>09</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="justify-content-between align-items-center d-flex">
-                            <h6>Adventure</h6>
-                            <span>44</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <h4 class="title">Post Categories</h4>
+                        <ul>
+                            @foreach ($categoryCounts as $category)
+                            <li>
+                                <a href="#" class="justify-content-between align-items-center d-flex">
+                                    <h6>{{ $category->category }}</h6>
+                                    <span>{{ $category->count }}</span>
+                                </a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
 
             <div class="single-widget recent-posts-widget">
                 <h4 class="title">Recent Posts</h4>

@@ -44,6 +44,18 @@
                 <input type="file" id="image" name="image" class="form-control">
                 @error('image') <span class="error">{{ $message }}</span> @enderror
             </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" class="form-control">
+                    <option value="Technology">Technology</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Art">Art</option>
+                    <option value="Food">Food</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Adventure">Adventure</option>
+                </select>
+            </div>
 
             <!-- Submit Button -->
             <div class="mt-3">

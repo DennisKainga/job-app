@@ -33,6 +33,9 @@
     <link rel="stylesheet" href= "{{ asset('assets/css/blog/blog-single.css') }}" >
     <link rel="stylesheet" href= "{{ asset('assets/css/blog/upload.css') }}" >
     <link rel="stylesheet" href= "{{ asset('assets/css/blog/blog-list.css') }}" >
+    <!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
     
     @livewireStyles
 </head>
@@ -64,6 +67,10 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
     <script src="{{ asset('assets/js/blogs/blogs.js') }}"></script>
+    <!-- Select2 JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
 
     @livewireScripts
 </body>
