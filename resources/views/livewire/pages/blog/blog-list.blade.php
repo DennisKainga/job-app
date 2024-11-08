@@ -11,14 +11,15 @@
             @endif
         </div>
     </div>
-
+    
     @endforeach
-
-    @if($hasMore)
-    <!-- Show Load More button if there are more blogs to load -->
-    <button wire:click="loadMore" class="load-more-btn">
-        View More
-    </button>
+    @if ($hasMore)
+    <button wire:click="loadMore" class="btn btn-primary">
+    Load More
+</button>
+    @else
+        <p>No more blogs to load.</p>
     @endif
+   
     
 </div>

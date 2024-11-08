@@ -130,6 +130,7 @@
                             <div>
 
                                 @livewire('pages.blog.blog-list')
+                                
                             </div>
 
 

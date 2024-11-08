@@ -16,7 +16,7 @@ class BlogUpload extends Component
     public $title;
     public $content;
     public $image;
-    public $category;  // Add category property
+    public $category;  
 
     // Define categories
     public $categories = [
@@ -53,15 +53,7 @@ class BlogUpload extends Component
     }
     
 
-    public function getCategoryCounts()
-    {
-        // Assuming you have a 'category' column in your 'blogs' table
-        $categoryCounts = Blog::select('category', DB::raw('count(*) as count'))
-                                ->groupBy('category')
-                                ->get();
-
-        return $categoryCounts;
-    }
+   
 
     public function render()
     {

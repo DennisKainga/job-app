@@ -11,13 +11,16 @@ class BlogList extends Component
     
     
     public $blogs;
+    
 
     protected $listeners = ['blogAdded' => 'refreshBlogs'];
 
     public function mount()
     {
+        $this->blogs = Blog::limit($this->limit)->get();
         $this->blogs = Blog::all();
         $this->refreshBlogs();
+        $this->updateHasMore();
     }
 
     public function refreshBlogs()
@@ -37,11 +40,14 @@ class BlogList extends Component
     public function loadMore()
     {
         $this->limit += 3; // Load 3 more each time
-        $totalBlogs = Blog::count();
-
-        // Check if there are more blogs after increasing the limit
-        $this->hasMore = Blog::count();
-        $this->hasMore = $totalBlogs > $this->limit;
+        $this->hasMore = Blog::count() > $this->limit;
+        $this->blogs = Blog::limit($this->limit)->get();
+        $this->updateHasMore();
+        
+    }
+    public function updateHasMore()
+    {
+        $this->hasMore = Blog::count() > $this->limit;
     }
     public function render()
     {

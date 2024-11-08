@@ -14,7 +14,7 @@ class BlogController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048', // 2MB max size
+            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048', 
             'category' => 'required|string|in:Technology,Lifestyle,Fashion,Art,Food,Architecture,Adventure',
         ]);
 
@@ -29,7 +29,7 @@ class BlogController extends Controller
             'title' => $request->input('title'),
             'content' => $request->input('content'),
             'image_path' => $imagePath,
-            'category' => $validated['category'],  // Store the category
+            'category' => $validated['category'],  
         ]);
 
         
